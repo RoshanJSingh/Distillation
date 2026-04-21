@@ -1,0 +1,39 @@
+seed: 42
+output_dir: outputs
+
+data:
+  data_root: data
+  max_train_samples: 10000
+  labeled_count: 2000
+  unlabeled_count: 6000
+  val_count: 2000
+  test_count: null
+  num_workers: 0
+
+teacher:
+  batch_size: 128
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  embedding_dim: 64
+
+student:
+  batch_size: 256
+  epochs: 60
+  learning_rate: 0.15
+  weight_decay: 0.0001
+  init_scale: 0.01
+
+distillation:
+  alpha: 0.5
+  temperature: 2.5
+  semantic_mode: full
+  top_k: 3
+  pseudo_label_threshold: 0.85
+
+coreset:
+  size: 1000
+  n_clusters: 40
+  entropy_weight: 0.5
+  disagreement_weight: 0.5
+  projection: pca
