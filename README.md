@@ -226,10 +226,3 @@ But the output will look like this:
 6. `src/coreset.py`
 7. `scripts/train_student_distilled.py`
 
-## Resume idea map
-
-- `response-based distillation`: `src/distillation.py` and `scripts/train_student_distilled.py`
-- `teacher vs student`: `src/teacher_model.py` and `src/student_manual.py`
-- `K-means++ coreset`: `src/coreset.py` and `scripts/select_coreset.py`
-- `uncertainty-driven unlabeled selection`: `src/coreset.py`
-- `manual gradient updates`: `src/student_manual.py`
